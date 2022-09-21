@@ -1,7 +1,6 @@
-import { galleryItems } from './gallery-items.js';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
-
+import { galleryItems } from './gallery-items.js';
 // Change code below this line
 
 const listForRender = document.querySelector('.gallery');
@@ -25,7 +24,7 @@ function createGalleryMarkup() {
     .join('');
 }
 
-let gallery = new SimpleLightbox('.gallery a', {
+new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
   captionDelay: '250',
 });
