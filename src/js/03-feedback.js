@@ -29,6 +29,7 @@ populateTextarea();
 function populateTextarea() {
   const saveMessage = localStorage.getItem(STORAGE_KEY);
   const obj = JSON.parse(saveMessage);
+  Object.assign(formData, obj);
 
   if (obj?.message) {
     refs.message.value = obj.message;
